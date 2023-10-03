@@ -1,6 +1,6 @@
 terraform {
     cloud {
-        organization = "lathlarue" /// replace with your organization name
+        organization = "lathanlarue" /// replace with your organization name
         workspaces {
           name = "aws-terraforming" /// replace with your workspace name
         }
