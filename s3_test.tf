@@ -13,13 +13,19 @@ terraform {
   }
 }
 
+resource "random_string" "test" {
+  length = 4
+  lower  = true
+}
+
+
 # Configure the AWS Provider
 provider "aws" {
   region = "ap-south-1" # define region as per your account
 }
 
-resource "aws_s3_bucket" "new_bucket" {
-  bucket = "demo-github-action-tf-medium"
+resource "aws_s3_bucket" "test_bucket" {
+  bucket = random_string.test
 
   object_lock_enabled = false
 
