@@ -27,7 +27,7 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "test_bucket" {
-  bucket = "${random_string.test}"
+  bucket = "ijukhygjthfgtjhkugyjfthyjgukhgyjf"
 
   object_lock_enabled = false
 
