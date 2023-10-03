@@ -14,8 +14,10 @@ terraform {
 }
 
 resource "random_string" "test" {
-  length = 4
-  lower  = true
+  length  = 8
+  lifecycle {
+    ignore_changes = all
+  }
 }
 
 
